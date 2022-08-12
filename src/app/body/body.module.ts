@@ -10,6 +10,9 @@ import { BodyComponent } from './body/body.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    BodyComponent
   ]
 })
 export class BodyModule { }
