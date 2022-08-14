@@ -31,3 +31,22 @@
   font-size: unset;
   height: 3.5rem;
 }
+
+.Mynavbar .navbar {
+    background-color: transparent !important;
+ background-image: linear-gradient(to right black, white);
+  }
+
+/* Modal css */
+/*-------define root colors---------*/
+:root {
+    --color-facebook: #3b5998;
+    --color-google: #ea4335;
+    --color-twitter: #1da1f2;
+
+    --style-1-color: #009688;
+    --style-2-color: #009688;
+    --style-3-color: #009688;
+}
+
+
