@@ -14,11 +14,11 @@ export class LoginComponent implements OnInit {
     console.log("Login Component Activated")
   }
 
-  routeregister(){
-    this.route.navigateByUrl("/register");
-  }
-  routeforgotpass(){
-    this.route.navigateByUrl("/forgotpass");
-  }
+  // routeregister(){
+  //   this.route.navigateByUrl("/register");
+  // }
+  // routeforgotpass(){
+  //   this.route.navigateByUrl("/forgotpass");
+  // }
 
 }

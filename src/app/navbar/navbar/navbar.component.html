@@ -1,39 +1,40 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 purple-gradient">
   <div class="container-fluid">
-    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+    <a class="navbar-brand mt-2 mt-lg-0" routerLink="/">
       <img
         src="https://assets.website-files.com/5d230436d635071c3f7da24d/5ddf5c3da73bad747a57e1e1_HealthifyMe---White-Logo-(Transparent).png"
-        height="45"
-        alt="MDB Logo"
-        loading="lazy"
-      />
+        height="45" alt="MDB Logo" loading="lazy" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto ">
         <li class="nav-item">
-          <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+          <a class="nav-link mx-2 active" aria-current="page" routerLink="">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link mx-2" href="#">Diet Plans</a>
+          <!-- need to remove href here -->
         </li>
         <li class="nav-item">
           <a class="nav-link mx-2" href="#">Meditation</a>
+          <!-- need to remove href here -->
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link mx-2 dropdown-toggle" routerLink="" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
             Register/Login
           </a>
-          <ul class="dropdown-menu bg-grey"  aria-labelledby="navbarDropdownMenuLink">
-            <li><a  class="dropdown-item" (click)="routelogin()"  >Login</a></li>
-            <li><a class="dropdown-item " (click)="routeregister()">Register</a></li>
-            <li><a class="dropdown-item " (click)="routeforgotpass()">Forgot Password</a></li>
+          <ul class="dropdown-menu bg-grey" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/login">Login</a></li>
+            <li><a class="dropdown-item " routerLink="/register">Register</a></li>
+            <li><a class="dropdown-item " routerLink="/forgotpass">Forgot Password</a></li>
           </ul>
         </li>
       </ul>
     </div>
   </div>
-  </nav>
+</nav>

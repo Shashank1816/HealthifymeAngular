@@ -13,14 +13,14 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
   //if we click on login button the url should change to /login
-  routelogin(){
-    this.router.navigateByUrl("/login");
-  }
-  routeregister(){
-    this.router.navigateByUrl("/register");
-  }
-  routeforgotpass(){
-    this.router.navigateByUrl("/forgotpass");
-  }
+  // routelogin(){
+  //   this.router.navigateByUrl("/login");
+  // }
+  // routeregister(){
+  //   this.router.navigateByUrl("/register");
+  // }
+  // routeforgotpass(){
+  //   this.router.navigateByUrl("/forgotpass");
+  // }
 
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { AuthRoutingModule } from './auth-routing.module';
 
 
 
@@ -13,7 +14,8 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     ForgotpasswordComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AuthRoutingModule
   ],
   exports: [
     LoginComponent,

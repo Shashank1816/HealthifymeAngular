@@ -1,76 +1,74 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 purple-gradient">
-    <div class="container-fluid">
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img
-          src="https://assets.website-files.com/5d230436d635071c3f7da24d/5ddf5c3da73bad747a57e1e1_HealthifyMe---White-Logo-(Transparent).png"
-          height="45"
-          alt="MDB Logo"
-          loading="lazy"
-        />
-      </a>
+  <div class="container-fluid">
+    <a class="navbar-brand mt-2 mt-lg-0" routerLink="/">
+      <img
+        src="https://assets.website-files.com/5d230436d635071c3f7da24d/5ddf5c3da73bad747a57e1e1_HealthifyMe---White-Logo-(Transparent).png"
+        height="45" alt="MDB Logo" loading="lazy" />
+    </a>
   </div>
-  </nav> 
+</nav>
 <section class="vh-100 gradient-custom">
-    <div class="container-fluid h-custom">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-md-9 col-lg-6 col-xl-5">
-          <img src="https://media.istockphoto.com/photos/silhouette-of-a-strong-fighter-picture-id479009182?k=20&m=479009182&s=612x612&w=0&h=sqGloVztJZrk245qEFTRB2EAxZ_0i2QNJytxtLPtoJ4="
-            class="img-fluid" alt="Sample image">
-        </div>
-        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-          <form>
-            
-  
-            <div class="divider d-flex align-items-center my-4">
-              <p class="text-center fw-bold mx-3 mb-0">Login Credentials</p>
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img
+          src="https://media.istockphoto.com/photos/silhouette-of-a-strong-fighter-picture-id479009182?k=20&m=479009182&s=612x612&w=0&h=sqGloVztJZrk245qEFTRB2EAxZ_0i2QNJytxtLPtoJ4="
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form>
+
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Login Credentials</p>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="Enter a valid email address" />
+            <label class="form-label" for="form3Example3">Email address</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" id="form3Example4" class="form-control form-control-lg"
+              placeholder="Enter password" />
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Remember me
+              </label>
             </div>
-  
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input type="email" id="form3Example3" class="form-control form-control-lg"
-                placeholder="Enter a valid email address" />
-              <label class="form-label" for="form3Example3">Email address</label>
-            </div>
-  
-            <!-- Password input -->
-            <div class="form-outline mb-3">
-              <input type="password" id="form3Example4" class="form-control form-control-lg"
-                placeholder="Enter password" />
-              <label class="form-label" for="form3Example4">Password</label>
-            </div>
-  
-            <div class="d-flex justify-content-between align-items-center">
-              <!-- Checkbox -->
-              <div class="form-check mb-0">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                <label class="form-check-label" for="form2Example3">
-                  Remember me
-                </label>
-              </div>
-              <a (click)="routeforgotpass()" class="text-body" >Forgot password?</a>
-            </div>
-  
-            <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="button" class="btn btn-primary btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a (click)="routeregister()"
-                  class="link-danger">Register</a></p>
-            </div>
-  
-          </form>
-        </div>
+            <a routerLink="/forgotpass" class="text-body">Forgot password?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/register"
+                class="link-danger">Register</a></p>
+          </div>
+
+        </form>
       </div>
     </div>
-    <div
-      class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-dark">
-      <!-- Copyright -->
-      <div class="text-white mb-3 mb-md-0">
-        Copyright © 2022. All rights reserved.
-      </div>
-      <!-- Copyright -->
-  
-      <!-- Right -->
-      
-      <!-- Right -->
+  </div>
+  <div
+    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-dark">
+    <!-- Copyright -->
+    <div class="text-white mb-3 mb-md-0">
+      Copyright © 2022. All rights reserved.
     </div>
-  </section>
+    <!-- Copyright -->
+
+    <!-- Right -->
+
+    <!-- Right -->
+  </div>
+</section>
