@@ -13,7 +13,7 @@ import { BodyComponent } from '../body/body/body.component';
     CommonModule
   ],
   exports: [
-    BodyComponent
+    FooterComponent
   ]
 })
 export class FooterModule { }
