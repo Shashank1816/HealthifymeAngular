@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,7 +24,8 @@ import { ProfileModule } from './profile/profile.module';
     FooterModule,
     AuthModule,
     LandingModule,
-    ProfileModule
+    ProfileModule,
+    HttpClientModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
