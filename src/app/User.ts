@@ -7,4 +7,5 @@ export class User{
     weight : number  | undefined;
     height : number | undefined;
     plan_id : number | undefined;
+    gender: string | undefined;
 }
