@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AppService {
 
-  baseURL = "localhost:8080/"
+  baseURL = "http://localhost:8080/"
   constructor(public http: HttpClient) { }
 
 
