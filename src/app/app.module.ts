@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { BodyModule } from './body/body.module';
 import { FooterModule } from './footer/footer.module';
 import { LandingModule } from './landing/landing.module';
 import { NavbarModule } from './navbar/navbar.module';
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { NavbarModule } from './navbar/navbar.module';
     BodyModule,
     FooterModule,
     AuthModule,
-    LandingModule
+    LandingModule,
+    ProfileModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
