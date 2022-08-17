@@ -26,7 +26,8 @@ import { ProfileModule } from './profile/profile.module';
     AuthModule,
     LandingModule,
     ProfileModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

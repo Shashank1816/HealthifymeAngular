@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { ProfileRoutingModule } from './profile-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,8 @@ import { ProfileRoutingModule } from './profile-routing.module';
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    FormsModule
   ],
   exports:[
     ProfilepageComponent
