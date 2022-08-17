@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppService } from 'src/app/app.service';
-import { Plan } from 'src/app/Plan';
 import { User } from 'src/app/User';
 
 @Component({
@@ -11,7 +10,7 @@ import { User } from 'src/app/User';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private appservice: AppService) { }
+  constructor(private appservice: AppService, private route:Router) { }
 
   ngOnInit(): void {
   }
