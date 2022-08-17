@@ -10,12 +10,12 @@ import { User } from 'src/app/User';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private appservice: AppService, private route:Router) { }
+  constructor(private appservice: AppService, private route: Router) { }
 
   ngOnInit(): void {
   }
 
-  user : User = new User;
+  user: User = new User;
 
   password: string | undefined;
   confirmPassword: string | undefined;
@@ -26,12 +26,28 @@ export class RegisterComponent implements OnInit {
       alert("Passwords mismatch");
       return;
     }
+    if (!this.ValidateEmail(this.user.email)) {
+      alert("Invalid email id");
+      return;
+    }
     this.user.password = this.password;
     this.user.gender = "M"; //need to change this
     console.log(this.user);
     this.appservice.registerUser(this.user).subscribe(data => {
       console.log("Successfully registered!");
     });
+    this.route.navigateByUrl("/login");
     // console.log(res);
+  }
+
+  //validation of email
+  ValidateEmail(uemail: any) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (uemail.match(mailformat)) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
