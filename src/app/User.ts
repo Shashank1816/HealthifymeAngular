@@ -1,5 +1,7 @@
+import { Plan } from "./Plan";
+
 export class User {
-    user_id : number | undefined;
+    user_id: number | undefined;
     name: string | undefined;
     password: string | undefined;
     email: string | undefined;
@@ -7,5 +9,5 @@ export class User {
     weight: number | undefined;
     height: number | undefined;
     gender: string | undefined;
-    plan_id: number | undefined;
+    plan: Plan | undefined;
 }
