@@ -28,7 +28,7 @@ export class AppService {
     const headers = {'content-type' : 'application/json'}
     const body = JSON.stringify({email,password});
     console.log("[Inside appservice]This is the data we are sending to spring" + body);
-    return this.http.post<User[]>(this.baseURL + 'loginuser',body,{'headers':headers})
+    return this.http.post<User[]>(this.baseURL + 'login',body,{'headers':headers})
     
   }
 
