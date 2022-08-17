@@ -5,6 +5,7 @@ import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.co
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LandingpageComponent } from './landing/landingpage/landingpage.component';
+import { PlansComponent } from './plans/plans/plans.component';
 import { ProfilepageComponent } from './profile/profilepage/profilepage.component';
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path:'profilepage',
     component:ProfilepageComponent
+  },
+  {
+    path:'plans',
+    component:PlansComponent
   }
 ];
 

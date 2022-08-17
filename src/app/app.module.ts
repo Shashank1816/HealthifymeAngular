@@ -11,6 +11,7 @@ import { BodyModule } from './body/body.module';
 import { FooterModule } from './footer/footer.module';
 import { LandingModule } from './landing/landing.module';
 import { NavbarModule } from './navbar/navbar.module';
+import { PlansModule } from './plans/plans.module';
 import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ProfileModule } from './profile/profile.module';
     LandingModule,
     ProfileModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    PlansModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
