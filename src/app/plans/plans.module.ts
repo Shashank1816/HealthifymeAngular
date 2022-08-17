@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlansComponent } from './plans/plans.component';
+import { NavbarComponent } from '../navbar/navbar/navbar.component';
+import { NavbarModule } from '../navbar/navbar.module';
+import { FooterModule } from '../footer/footer.module';
 
 
 
@@ -9,7 +12,9 @@ import { PlansComponent } from './plans/plans.component';
     PlansComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NavbarModule,
+    FooterModule
   ],
   exports:[
     PlansComponent

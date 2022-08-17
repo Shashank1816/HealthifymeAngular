@@ -12,4 +12,8 @@ export class PlansComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //just to check whether click is working or not.
+  afterclick(){
+    alert("Click is working");
+  }
 }
