@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
+import { Plan } from 'src/app/Plan';
 import { User } from 'src/app/User';
 
 @Component({
@@ -27,8 +28,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
     this.user.password = this.password;
-    this.user.plan_id = -1;
-    this.user.gender = "M";
+    this.user.gender = "M"; //need to change this
     console.log(this.user);
     this.appservice.registerUser(this.user).subscribe(data => {
       console.log("Successfully registered!");
