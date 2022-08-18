@@ -9,7 +9,7 @@ import { User } from 'src/app/User';
 })
 export class ProfilepageComponent implements OnInit {
 
-  constructor(private appservice : AppService) { }
+  constructor(public appservice : AppService) { }
 
   ngOnInit(): void {
     this.refreshPeople();

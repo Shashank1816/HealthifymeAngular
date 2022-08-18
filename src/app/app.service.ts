@@ -13,7 +13,7 @@ export class AppService {
   private baseURL = "http://localhost:8080/"
   constructor(private http: HttpClient, private route: Router) { }
 
-  globalloggedinuser : User | undefined;//currently logged in user
+  globalloggedinuser : any;//currently logged in user
 
 
   //to get all the users

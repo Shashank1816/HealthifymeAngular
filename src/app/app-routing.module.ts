@@ -26,7 +26,7 @@ const routes: Routes = [
     component:ForgotpasswordComponent
   },
   {
-    path:'profilepage',
+    path:'profile/:email',
     component:ProfilepageComponent
   },
   {
