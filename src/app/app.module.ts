@@ -13,6 +13,10 @@ import { LandingModule } from './landing/landing.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { PlansModule } from './plans/plans.module';
 import { ProfileModule } from './profile/profile.module';
+import { CalorietrackerModule } from './trackers/calorietracker/calorietracker.module';
+import { TrackersModule } from './trackers/trackers.module';
+import { WatertrackerModule } from './trackers/watertracker/watertracker.module';
+import { WeighttrackerModule } from './trackers/weighttracker/weighttracker.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { ProfileModule } from './profile/profile.module';
     ProfileModule,
     HttpClientModule,
     FormsModule,
-    PlansModule
+    PlansModule,
+    TrackersModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

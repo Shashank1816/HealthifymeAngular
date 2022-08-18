@@ -7,6 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LandingpageComponent } from './landing/landingpage/landingpage.component';
 import { PlansComponent } from './plans/plans/plans.component';
 import { ProfilepageComponent } from './profile/profilepage/profilepage.component';
+import { TrackersComponent } from './trackers/trackers/trackers.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path:'plans',
     component:PlansComponent
+  },
+  {
+    path:'trackers',
+    component:TrackersComponent
   }
 ];
 
