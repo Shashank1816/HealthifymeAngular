@@ -16,11 +16,11 @@ const routes: Routes = [
   },
   {
     path:'login',
-    component:LoginComponent
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
     path:'register',
-    component:RegisterComponent
+    component:RegisterComponent,
   },
   {
     path:'forgotpass',
@@ -32,11 +32,17 @@ const routes: Routes = [
   },
   {
     path:'plans',
-    component:PlansComponent
+    component:PlansComponent,
+    loadChildren: () =>import ('./plans/plans.module').then(m => m.PlansModule)
   },
   {
     path:'trackers',
     component:TrackersComponent
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

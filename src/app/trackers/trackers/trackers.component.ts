@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trackers',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrackersComponent implements OnInit {
 
-  constructor() { }
+  constructor(public route:Router) { }
 
   ngOnInit(): void {
   }
 
+  afterclickwater(){
+    this.route.navigateByUrl("/trackers/water");
+  }
+  afterclickcalorie(){
+    this.route.navigateByUrl("/trackers/calorie");
+  }
+  afterclickweight(){
+    this.route.navigateByUrl("/trackers/weight");
+  }
 }

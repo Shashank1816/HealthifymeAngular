@@ -8,6 +8,7 @@ import { WatertrackerModule } from './watertracker/watertracker.module';
 import { WeighttrackerModule } from './weighttracker/weighttracker.module';
 import { CalorietrackerModule } from './calorietracker/calorietracker.module';
 import { TrackersRoutingModule } from './trackers-routing.module';
+import { NavbarModule } from '../navbar/navbar.module';
 
 
 
@@ -20,7 +21,8 @@ import { TrackersRoutingModule } from './trackers-routing.module';
     CalorietrackerModule,
     WatertrackerModule,
     WeighttrackerModule,
-    TrackersRoutingModule
+    TrackersRoutingModule,
+    NavbarModule
   ],
   exports:[
     WatertrackerModule,

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlansComponent } from './plans/plans.component';
-import { NavbarComponent } from '../navbar/navbar/navbar.component';
 import { NavbarModule } from '../navbar/navbar.module';
 import { FooterModule } from '../footer/footer.module';
+import { PlansRoutingModule } from './plans-routing.module';
 
 
 
@@ -14,10 +14,10 @@ import { FooterModule } from '../footer/footer.module';
   imports: [
     CommonModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    PlansRoutingModule
   ],
   exports:[
-    PlansComponent
   ]
 })
 export class PlansModule { }
