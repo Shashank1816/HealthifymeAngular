@@ -4,6 +4,7 @@ import { User } from './User';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Water } from './Water';
+import { Weight } from './Weight';
 
 
 @Injectable({
@@ -47,5 +48,11 @@ export class AppService {
     console.log("Inside submitwaterinfo service request");
     return this.http.post(this.baseURL + 'trackers/water',water);
 
+  }
+
+  //service for posting weight info coming from a particular user
+  submitweightinfo(weight: Weight):Observable<any>{
+    console.log("Inside submitweightinfo service");
+    return this.http.post(this.baseURL + 'trackers/weight',weight);
   }
 }
