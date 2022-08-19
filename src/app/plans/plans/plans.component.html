@@ -1,7 +1,7 @@
 
 <app-navbar></app-navbar>
 <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap" id="parentcontainer">
-    <div class="card d-flex position-relative flex-column bg-dark" (click)="afterclick()">
+    <div class="card d-flex position-relative flex-column bg-dark">
         <div class='imgContainer'>
             <img src='https://cdn.pixabay.com/photo/2017/09/08/10/27/slimming-2728331__480.jpg'>
             <p class="bg-dark rounded text-center text-white" style="margin-bottom:0;">Lose Weight</p>
@@ -11,7 +11,8 @@
             <p>We know it’s hard. We know you’d much rather do something more fun than go for a run, or choose the low-cal option, or run the calories of everything you eat through HealthifyMe. But it’s worth it, and you can make it happen.</p>    
         </div>
     </div>
-    <div class="card d-flex position-relative flex-column bg-dark" (click)="afterclick()">
+    <button class="btn btn-primary" (click)="addPlan(1)">Activate Plan</button>
+    <div class="card d-flex position-relative flex-column bg-dark">
         <div class='imgContainer'>
             <img src='https://cdn.pixabay.com/photo/2018/03/26/17/24/man-3263324__480.jpg'>
             <p class="bg-dark rounded text-center text-white" style="margin-bottom:0;">Build Muscle</p>
@@ -19,16 +20,18 @@
         <div class="content text-white">
             <h2>Bulk up</h2>
             <p>Building lean muscle helps increase bone density, manage weight, decrease risk of chronic disease, and improve quality of life. Muscles act as an “engine” that burns calories, even at rest.</p>
-         </div>
+            <button class="btn btn-primary" (click)="addPlan(2)">Activate Plan</button>
+        </div>
     </div>
-    <div class="card d-flex position-relative flex-column bg-dark" (click)="afterclick()">
+    <div class="card d-flex position-relative flex-column bg-dark">
         <div class='imgContainer'>
             <img src='https://images.pexels.com/photos/847483/pexels-photo-847483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-            <p class="bg-dark rounded text-center text-white" style="margin-bottom:0;">Meditation</p>
+            <p class="bg-dark rounded text-center text-white" style="margin-bottom:0;">Weight Gain</p>
         </div>
         <div class="content text-white">
             <h2>Peace in mind</h2>
             <p>Distractions are everywhere. Notice what takes your attention, acknowledge it, and then let it go.</p>
+            <button class="btn btn-primary" (click)="addPlan(3)">Activate Plan</button>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@ export class Diet {
     breakfast: string | undefined;
     lunch: string | undefined;
     dinner: string | undefined;
-    calorieIntake: number | undefined;
+    calorieIntake: string | undefined;
     protein: number | undefined;
     fat: number | undefined;
     carb: number | undefined;
