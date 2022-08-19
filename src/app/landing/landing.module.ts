@@ -4,7 +4,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { NavbarModule } from '../navbar/navbar.module';
 import { BodyModule } from '../body/body.module';
 import { FooterModule } from '../footer/footer.module';
-import { AuthModule } from '../auth/auth.module';
+// import { AuthModule } from '../auth/auth.module';
 
 
 
@@ -17,7 +17,7 @@ import { AuthModule } from '../auth/auth.module';
     NavbarModule,
     BodyModule,
     FooterModule,
-    AuthModule
+    // AuthModule
   ],
   exports:[
     LandingpageComponent

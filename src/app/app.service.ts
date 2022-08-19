@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { Diet } from './Diet';
 import { Workout } from './Workout';
 import { Plan } from './Plan';
+import { Water } from './Water';
 
 
 @Injectable({
@@ -54,5 +55,11 @@ export class AppService {
 
   getPlan(plan_id: number): Observable<Plan> {
     return this.http.get<Plan>(this.baseURL + 'plans/' + plan_id);
+  }
+
+  //service for posting water info coming from a particular user
+  sumbitwaterinfo(water: Water): Observable<any> {
+    console.log("Inside submitwaterinfo service request");
+    return this.http.post(this.baseURL + 'trackers/water', water);
   }
 }
