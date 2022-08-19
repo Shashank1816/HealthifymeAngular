@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from './User';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { Water } from './Water';
 
 
 @Injectable({
@@ -39,5 +40,12 @@ export class AppService {
     console.log("Inside the register user post request");
     return this.http.post(this.baseURL + 'users', user);
     // this.route.navigateByUrl("/profilepage");
+  }
+
+  //service for posting water info coming from a particular user
+  sumbitwaterinfo(water: Water): Observable<any>{
+    console.log("Inside submitwaterinfo service request");
+    return this.http.post(this.baseURL + 'trackers/water',water);
+
   }
 }
