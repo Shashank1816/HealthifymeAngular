@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CalorietrackerComponent } from './calorietracker/calorietracker.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,8 @@ import { CalorietrackerComponent } from './calorietracker/calorietracker.compone
     CalorietrackerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     CalorietrackerComponent

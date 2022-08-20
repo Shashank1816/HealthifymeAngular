@@ -31,6 +31,7 @@ export class TrackersComponent implements OnInit {
     }
     else{
       this.route.navigateByUrl("/login");
+      alert("You need to be logged in first!");
     }
   }
   afterclickweight(){
@@ -39,6 +40,7 @@ export class TrackersComponent implements OnInit {
     }
     else{
       this.route.navigateByUrl("/login");
+      alert("You need to be logged in first");
     }
     
   }

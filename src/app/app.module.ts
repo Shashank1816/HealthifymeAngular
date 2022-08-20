@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { BodyModule } from './body/body.module';
+import { CaloriecounterModule } from './caloriecounter/caloriecounter.module';
 import { FooterModule } from './footer/footer.module';
 import { LandingModule } from './landing/landing.module';
 import { NavbarModule } from './navbar/navbar.module';
@@ -30,7 +31,8 @@ import { WeighttrackerModule } from './trackers/weighttracker/weighttracker.modu
     ProfileModule,
     HttpClientModule,
     FormsModule,
-    TrackersModule
+    TrackersModule,
+    CaloriecounterModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

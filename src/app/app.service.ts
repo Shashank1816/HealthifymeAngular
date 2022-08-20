@@ -8,6 +8,7 @@ import { Workout } from './Workout';
 import { Plan } from './Plan';
 import { Water } from './Water';
 import { Weight } from './Weight';
+import { Calorie } from './Calorie';
 
 
 @Injectable({
@@ -68,5 +69,11 @@ export class AppService {
   sumbitwaterinfo(water: Water): Observable<any> {
     console.log("Inside submitwaterinfo service request");
     return this.http.post(this.baseURL + 'trackers/water', water);
+  }
+
+  //service for posting calorie info coming form a particular user
+  submitcalorieinfo(calorie: Calorie):Observable<any>{
+    console.log("Inside submitcalorieinfo service request");
+    return this.http.post(this.baseURL+'trackers/calorie',calorie);
   }
 }

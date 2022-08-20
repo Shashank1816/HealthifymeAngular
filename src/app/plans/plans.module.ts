@@ -4,12 +4,14 @@ import { PlansComponent } from './plans/plans.component';
 import { NavbarModule } from '../navbar/navbar.module';
 import { FooterModule } from '../footer/footer.module';
 import { PlansRoutingModule } from './plans-routing.module';
+import { ReviewComponent } from './review/review.component';
 
 
 
 @NgModule({
   declarations: [
-    PlansComponent
+    PlansComponent,
+    ReviewComponent
   ],
   imports: [
     CommonModule,
