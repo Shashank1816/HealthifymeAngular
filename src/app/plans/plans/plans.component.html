@@ -1,7 +1,7 @@
 
 <app-navbar></app-navbar>
 <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap" id="parentcontainer">
-    <div class="card d-flex position-relative flex-column bg-dark">
+    <div class="card d-flex position-relative flex-column bg-dark" (click)="activateweightloss()">
         <div class='imgContainer'>
             <img src='https://cdn.pixabay.com/photo/2017/09/08/10/27/slimming-2728331__480.jpg'>
             <p class="bg-dark rounded text-center text-white" style="margin-bottom:0;">Lose Weight</p>
@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="card d-flex position-relative flex-column bg-dark">
+    <div class="card d-flex position-relative flex-column bg-dark" (click)="activatemusclebuild()">
         <div class='imgContainer'>
             <img src='https://cdn.pixabay.com/photo/2018/03/26/17/24/man-3263324__480.jpg'>
             <p class="bg-dark rounded text-center text-white" style="margin-bottom:0;">Build Muscle</p>
@@ -23,7 +23,7 @@
             
         </div>
     </div>
-    <div class="card d-flex position-relative flex-column bg-dark">
+    <div class="card d-flex position-relative flex-column bg-dark" (click)="activateweightgain()">
         <div class='imgContainer'>
             <img src='https://images.pexels.com/photos/847483/pexels-photo-847483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
             <p class="bg-dark rounded text-center text-white" style="margin-bottom:0;">Weight Gain</p>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Plan } from 'src/app/Plan';
 import { Diet } from 'src/app/Diet';
 import { AppService } from 'src/app/app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-plans',
@@ -10,7 +11,7 @@ import { AppService } from 'src/app/app.service';
 })
 export class PlansComponent implements OnInit {
 
-  constructor(private appservice: AppService) { }
+  constructor(private appservice: AppService, private route:Router) { }
 
   ngOnInit(): void {
   }
@@ -39,6 +40,45 @@ export class PlansComponent implements OnInit {
     //   this.plan.workout = data;
     //   console.log("Check Workout : ", this.plan);
     // })
+  }
+
+  //function after selecting weight loss
+  activateweightloss(){
+    if(this.appservice.globalloggedinuser){
+      //alert("You have selected weight loss!");
+      this.route.navigateByUrl("/plans/weightloss");
+    }
+    else{
+      alert("You need to be logged in first!");
+      this.route.navigateByUrl("/login");
+    }
+    
+  }
+
+  //function after selecting weight gain
+  activateweightgain(){
+    if(this.appservice.globalloggedinuser){
+      //alert("You have selected weight gain!");
+      this.route.navigateByUrl("/plans/weightgain");
+    }
+    else{
+      alert("You need to be logged in first!");
+      this.route.navigateByUrl("/login");
+    }
+    
+  }
+ 
+  //function after selecting musclebuild
+  activatemusclebuild(){
+    if(this.appservice.globalloggedinuser){
+     // alert("You have selected muscle build!");
+      this.route.navigateByUrl("/plans/musclebuild");
+    }
+    else{
+      alert("You need to be logged in first!");
+      this.route.navigateByUrl("/login");
+    }
+    
   }
 
 }

@@ -78,10 +78,11 @@ export class AppService {
   }
 
 
-  //service for getting calorie info of food
-  getcalorieinfo(food: String):Observable<String>{
-    console.log("inside getcalorieinfo")
-    return this.http.get<String>(this.baseURL+'caloriecount?food='+food);
 
-  }
+  //service for getting calorie info of food
+  getcalorieinfo(food: string):Observable<any>{
+    console.log("inside getcalorieinfo")
+    return this.http.get<any>(this.baseURL+'caloriecount?food='+food);
+
+}
 }
