@@ -5,13 +5,15 @@ import { NavbarModule } from '../navbar/navbar.module';
 import { FooterModule } from '../footer/footer.module';
 import { PlansRoutingModule } from './plans-routing.module';
 import { ReviewComponent } from './review/review.component';
+import { ActivateweightlossComponent } from './activateweightloss/activateweightloss.component';
 
 
 
 @NgModule({
   declarations: [
     PlansComponent,
-    ReviewComponent
+    ReviewComponent,
+    ActivateweightlossComponent
   ],
   imports: [
     CommonModule,
