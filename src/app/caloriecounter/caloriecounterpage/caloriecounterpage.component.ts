@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-caloriecounterpage',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaloriecounterpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public appservice:AppService) { }
 
+  foodname ="";
   ngOnInit(): void {
   }
 
+  foodapi(){
+    console.log("inside foodapi" ,this.foodname);
+    this.appservice.getfoodinfo(this.foodname);
+  }
 }

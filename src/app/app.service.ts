@@ -76,4 +76,9 @@ export class AppService {
     console.log("Inside submitcalorieinfo service request");
     return this.http.post(this.baseURL+'trackers/calorie',calorie);
   }
+
+  //service for getting 
+  getfoodinfo(foodname:any){
+
+  }
 }
