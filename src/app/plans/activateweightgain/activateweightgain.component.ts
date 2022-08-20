@@ -33,7 +33,9 @@ export class ActivateweightgainComponent implements OnInit {
     this.appservice.globalloggedinuser.weight_goal=this.goalentered;
     console.log("inside weightgainactivation ",this.selectedplan);
     console.log("Inside weightgainactivation - after plan set to user the user is : ",this.appservice.globalloggedinuser);
-    this.appservice.activateplan(this.appservice.globalloggedinuser);
+    this.appservice.activateplan(this.appservice.globalloggedinuser).subscribe(data=>{
+      console.log("After getting the response ",data);
+    });
   }
 
 }

@@ -81,8 +81,9 @@ export class AppService {
   
 
   //service for activating plan
-  activateplan(user: User){
+  activateplan(user: User):Observable<any>{
     console.log("inside activate plan service");
+    return this.http.post(this.baseURL+'buyplan',user);
   }
 
   //service for getting calorie info of food

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
+import { Diet } from 'src/app/Diet';
+import { Plan } from 'src/app/Plan';
+import { Workout } from 'src/app/Workout';
 
 @Component({
   selector: 'app-activatemusclebuild',
@@ -8,9 +11,31 @@ import { AppService } from 'src/app/app.service';
 })
 export class ActivatemusclebuildComponent implements OnInit {
 
-  constructor() { }
+  constructor(public appservice:AppService) { }
+
+  diet = new Diet;
+  workout= new Workout;
+  selectedplan= new Plan;
+  goalentered:number | undefined;
 
   ngOnInit(): void {
   }
+
+  musclebuildactivation(){
+    this.selectedplan.plan_id=2;
+    this.selectedplan.plan_name="musclebuild";
+    this.selectedplan.diet=this.diet;
+    this.selectedplan.workout=this.workout;
+    //this.selectedplan.plan_name="weightgain";
+    this.appservice.globalloggedinuser.plan=this.selectedplan;
+    this.appservice.globalloggedinuser.weight_goal=this.goalentered;
+    console.log("inside musclebuildactivation ",this.selectedplan);
+    console.log("Inside musclebuildactivation - after plan set to user the user is : ",this.appservice.globalloggedinuser);
+    this.appservice.activateplan(this.appservice.globalloggedinuser).subscribe(data=>{
+      console.log("After getting the response inside musclebuildactivation ",data);
+    });
+  }
+
+  
 
 }
