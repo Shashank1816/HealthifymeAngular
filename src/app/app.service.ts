@@ -52,9 +52,9 @@ export class AppService {
   }
 
   //service for posting weight info coming from a particular user
-  submitweightinfo(weight: Weight):Observable<any>{
+  submitweightinfo(weight: Weight): Observable<any> {
     console.log("Inside submitweightinfo service");
-    return this.http.post(this.baseURL + 'trackers/weight',weight);
+    return this.http.post(this.baseURL + 'trackers/weight', weight);
   }
 
   getWorkout(workoutId: number): Observable<Workout> {
@@ -72,24 +72,27 @@ export class AppService {
   }
 
   //service for posting calorie info coming form a particular user
-  submitcalorieinfo(calorie: Calorie):Observable<any>{
+  submitcalorieinfo(calorie: Calorie): Observable<any> {
     console.log("Inside submitcalorieinfo service request");
-    return this.http.post(this.baseURL+'trackers/calorie',calorie);
+    return this.http.post(this.baseURL + 'trackers/calorie', calorie);
   }
 
 
-  
+
 
   //service for activating plan
-  activateplan(user: User):Observable<any>{
+  activateplan(plan_id: number, goal: number): Observable<any> {
     console.log("inside activate plan service");
-    return this.http.post(this.baseURL+'buyplan',user);
+    const headers = { 'content-type': 'application/json' }
+    const body = JSON.stringify({ plan_id, goal });
+    console.log(body);
+    return this.http.put(this.baseURL + 'users/' + this.globalloggedinuser.user_id, body, { headers });
   }
 
   //service for getting calorie info of food
-  getcalorieinfo(food: string):Observable<any>{
+  getcalorieinfo(food: string): Observable<any> {
     console.log("inside getcalorieinfo")
-    return this.http.get<any>(this.baseURL+'caloriecount?food='+food);
+    return this.http.get<any>(this.baseURL + 'caloriecount?food=' + food);
 
-}
+  }
 }

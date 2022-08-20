@@ -11,31 +11,32 @@ import { Workout } from 'src/app/Workout';
 })
 export class ActivatemusclebuildComponent implements OnInit {
 
-  constructor(public appservice:AppService) { }
+  constructor(public appservice: AppService) { }
 
-  diet = new Diet;
-  workout= new Workout;
-  selectedplan= new Plan;
-  goalentered:number | undefined;
+  goalentered: number = 0;
 
   ngOnInit(): void {
   }
 
-  musclebuildactivation(){
-    this.selectedplan.plan_id=2;
-    this.selectedplan.plan_name="musclebuild";
-    this.selectedplan.diet=this.diet;
-    this.selectedplan.workout=this.workout;
-    //this.selectedplan.plan_name="weightgain";
-    this.appservice.globalloggedinuser.plan=this.selectedplan;
-    this.appservice.globalloggedinuser.weight_goal=this.goalentered;
-    console.log("inside musclebuildactivation ",this.selectedplan);
-    console.log("Inside musclebuildactivation - after plan set to user the user is : ",this.appservice.globalloggedinuser);
-    this.appservice.activateplan(this.appservice.globalloggedinuser).subscribe(data=>{
-      console.log("After getting the response inside musclebuildactivation ",data);
+  musclebuildactivation() {
+    // this.selectedplan.plan_id=2;
+    // this.selectedplan.plan_name="musclebuild";
+    // this.selectedplan.diet=this.diet;
+    // this.selectedplan.workout=this.workout;
+    // //this.selectedplan.plan_name="weightgain";
+    // this.appservice.globalloggedinuser.plan=this.selectedplan;
+    // this.appservice.globalloggedinuser.weight_goal=this.goalentered;
+    // console.log("inside musclebuildactivation ",this.selectedplan);
+    // console.log("Inside musclebuildactivation - after plan set to user the user is : ",this.appservice.globalloggedinuser);
+    // this.appservice.activateplan(this.appservice.globalloggedinuser).subscribe(data=>{
+    //   console.log("After getting the response inside musclebuildactivation ",data);
+    // });
+
+    return this.appservice.activateplan(2, this.goalentered).subscribe(data => {
+      console.log("Successfully activated Muscle Build Plan", data);
     });
   }
 
-  
+
 
 }
