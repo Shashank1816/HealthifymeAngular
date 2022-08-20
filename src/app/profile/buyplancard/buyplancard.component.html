@@ -13,10 +13,12 @@
                 <li><strong>Age : </strong>{{currentuser.age}}</li>
                 <li><strong>Weight(kg) : </strong>{{currentuser.weight}}</li>
                 <li><strong>Height(cm) : </strong>{{currentuser.height}}</li>
-                <li><strong>Active Plan : </strong>{{activeplan}}</li>
+                <li><strong>Active Plan : </strong>{{activeplan.plan_name}}</li>
+                <li><strong>Workout id : </strong>{{activeplan.workout.workout_id}}</li>
+                <li><strong>Diet id : </strong>{{activeplan.diet.diet_id}}</li>
               </ul>
               <div class="btn-area">
-                <a href="#">Edit</a>       
+                <a (click)="gototrackers()">Goto Trackers</a>       
               </div>
             </div>
           </div>
@@ -24,19 +26,21 @@
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="single-price">
             <div class="deal-top">
-              <h3>Standard Price</h3>
-              <h4> 59 <span class="sup">$</span> </h4>
+              <h3>{{activeplan.plan_name}}</h3>
+              <h4>Your Diet <span class="sup"></span> </h4>
             </div>
             <div class="deal-bottom">
               <ul class="deal-item">
-                <li>Workout Plan✅</li>
-                <li>Weight Loss Plan✅</li>
-                <li>Calorie tracker✅</li>
-                <li>Water Tracker✅</li>
-                <li>24 hour Support✅</li>
+                <li>{{activeplan.diet.breakfast}}✅</li>
+                <li>{{activeplan.diet.lunch}}✅</li>
+                <li>{{activeplan.diet.dinner}}✅</li>
+                <li>Calories/Day : {{activeplan.diet.calorieIntake}} KCal✅</li>
+                <li>Protein/Day : {{activeplan.diet.protein}} grams✅</li>
+                <li>Carbs/Day : {{activeplan.diet.carb}} grams✅</li>
+                <li>Fat/Day : {{activeplan.diet.fat}} grams✅</li>
               </ul>
               <div class="btn-area" disabled>
-                <a href="">Buy Now</a>       
+                <a (click)="gototrackers()">Goto Trackers</a>       
               </div>
             </div>
           </div>
@@ -44,19 +48,21 @@
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="single-price">
             <div class="deal-top">
-              <h3>Offer Price</h3>
-              <h4> 29<span class="sup">$</span> </h4> 
+              <h3>Gym Session</h3>
+              <h4> Workout<span class="sup"></span> </h4> 
             </div>
             <div class="deal-bottom">
               <ul class="deal-item">
-                <li>Workout Plan✅</li>
-                <li>Weight Loss Plan✅</li>
-                <li>Calorie tracker✅</li>
-                <li>Water Tracker✅</li>
-                <li>24 hour Support✅</li>
+                <li>{{activeplan.workout.exercise1}}✅</li>
+                <li>{{activeplan.workout.exercise2}}✅</li>
+                <li>{{activeplan.workout.exercise3}}✅</li>
+                <li>{{activeplan.workout.exercise4}}✅</li>
+                <li>{{activeplan.workout.exercise5}}✅</li>
+                <li>{{activeplan.workout.exercise6}}✅</li>
+                <li>Calories burnt/session {{activeplan.workout.caloriesBurnt}} Kcal✅</li>
               </ul>
               <div class="btn-area">
-                <a href="#">Buy Now</a>       
+                <a (click)="gototrackers()">Goto Trackers</a>       
               </div>
             </div>
           </div>

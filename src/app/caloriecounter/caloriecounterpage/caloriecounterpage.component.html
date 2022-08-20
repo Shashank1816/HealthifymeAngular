@@ -1,4 +1,11 @@
 <app-navbar></app-navbar>
-<p>caloriecounterpage works!</p>
-<input type="text" placeholder="Enter name of food" [(ngModel)]="foodname">
-<button type="submit" (click)="foodapi()">Search</button>
+<section class="vh-100 gradient-custom">
+    <div class="text-center text-white" style="padding-top:30px;">
+        <h3>Search for the food and get it's nutritional Values</h3>
+    </div>
+    <div class="text-center border-round" style="margin-top:30px;">
+        <input type="text" placeholder="Enter name of food" [(ngModel)]="foodname">
+        <button  type="button" (click)="foodapi()">Search</button>
+    </div>
+</section>
+
