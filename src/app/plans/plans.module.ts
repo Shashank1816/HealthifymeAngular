@@ -8,6 +8,7 @@ import { ReviewComponent } from './review/review.component';
 import { ActivateweightlossComponent } from './activateweightloss/activateweightloss.component';
 import { ActivateweightgainComponent } from './activateweightgain/activateweightgain.component';
 import { ActivatemusclebuildComponent } from './activatemusclebuild/activatemusclebuild.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,8 @@ import { ActivatemusclebuildComponent } from './activatemusclebuild/activatemusc
     CommonModule,
     NavbarModule,
     FooterModule,
-    PlansRoutingModule
+    PlansRoutingModule,
+    FormsModule
   ],
   exports:[
   ]

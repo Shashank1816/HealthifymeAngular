@@ -10,4 +10,5 @@ export class User {
     height: number | undefined;
     gender: string | undefined;
     plan: Plan | undefined;
+    weight_goal: number | undefined;
 }

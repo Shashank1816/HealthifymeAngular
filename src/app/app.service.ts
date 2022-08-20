@@ -81,4 +81,9 @@ export class AppService {
   getfoodinfo(foodname:any){
 
   }
+
+  //service for activating plan
+  activateplan(user: User){
+    console.log("inside activate plan service");
+  }
 }
