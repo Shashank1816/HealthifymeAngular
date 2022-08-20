@@ -76,4 +76,12 @@ export class AppService {
     console.log("Inside submitcalorieinfo service request");
     return this.http.post(this.baseURL+'trackers/calorie',calorie);
   }
+
+
+  //service for getting calorie info of food
+  getcalorieinfo(food: String):Observable<String>{
+    console.log("inside getcalorieinfo")
+    return this.http.get<String>(this.baseURL+'caloriecount?food='+food);
+
+  }
 }
