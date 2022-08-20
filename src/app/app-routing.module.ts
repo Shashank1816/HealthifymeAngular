@@ -6,6 +6,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CaloriecounterpageComponent } from './caloriecounter/caloriecounterpage/caloriecounterpage.component';
 import { LandingpageComponent } from './landing/landingpage/landingpage.component';
+import { ActivatemusclebuildComponent } from './plans/activatemusclebuild/activatemusclebuild.component';
+import { ActivateweightgainComponent } from './plans/activateweightgain/activateweightgain.component';
 import { ActivateweightlossComponent } from './plans/activateweightloss/activateweightloss.component';
 import { PlansComponent } from './plans/plans/plans.component';
 import { ProfilepageComponent } from './profile/profilepage/profilepage.component';
@@ -40,6 +42,14 @@ const routes: Routes = [
   {
     path:'plans/weightloss',
     component:ActivateweightlossComponent
+  },
+  {
+    path:'plans/weightgain',
+    component:ActivateweightgainComponent
+  },
+  {
+    path:'plans/musclebuild',
+    component:ActivatemusclebuildComponent
   },
   {
     path: 'trackers',

@@ -6,6 +6,8 @@ import { FooterModule } from '../footer/footer.module';
 import { PlansRoutingModule } from './plans-routing.module';
 import { ReviewComponent } from './review/review.component';
 import { ActivateweightlossComponent } from './activateweightloss/activateweightloss.component';
+import { ActivateweightgainComponent } from './activateweightgain/activateweightgain.component';
+import { ActivatemusclebuildComponent } from './activatemusclebuild/activatemusclebuild.component';
 
 
 
@@ -13,7 +15,9 @@ import { ActivateweightlossComponent } from './activateweightloss/activateweight
   declarations: [
     PlansComponent,
     ReviewComponent,
-    ActivateweightlossComponent
+    ActivateweightlossComponent,
+    ActivateweightgainComponent,
+    ActivatemusclebuildComponent
   ],
   imports: [
     CommonModule,

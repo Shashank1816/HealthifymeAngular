@@ -45,8 +45,34 @@ export class PlansComponent implements OnInit {
   //function after selecting weight loss
   activateweightloss(){
     if(this.appservice.globalloggedinuser){
-      alert("You have selected weight loss!");
+      //alert("You have selected weight loss!");
       this.route.navigateByUrl("/plans/weightloss");
+    }
+    else{
+      alert("You need to be logged in first!");
+      this.route.navigateByUrl("/login");
+    }
+    
+  }
+
+  //function after selecting weight gain
+  activateweightgain(){
+    if(this.appservice.globalloggedinuser){
+      //alert("You have selected weight gain!");
+      this.route.navigateByUrl("/plans/weightgain");
+    }
+    else{
+      alert("You need to be logged in first!");
+      this.route.navigateByUrl("/login");
+    }
+    
+  }
+ 
+  //function after selecting musclebuild
+  activatemusclebuild(){
+    if(this.appservice.globalloggedinuser){
+     // alert("You have selected muscle build!");
+      this.route.navigateByUrl("/plans/musclebuild");
     }
     else{
       alert("You need to be logged in first!");
