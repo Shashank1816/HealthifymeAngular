@@ -95,4 +95,8 @@ export class AppService {
     return this.http.get<any>(this.baseURL + 'caloriecount?food=' + food);
 
   }
+
+  getUsersWeightList() : Observable<any>{
+    return this.http.get<Weight[]>(this.baseURL + 'users/' + this.globalloggedinuser.user_id + '/weight');
+  }
 }

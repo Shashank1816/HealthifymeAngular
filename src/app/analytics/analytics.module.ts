@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnalyticspageComponent } from './analyticspage/analyticspage.component';
 import { NavbarModule } from '../navbar/navbar.module';
+import { AnalyticsRoutingModule } from './analytics-routing.module';
 
 
 
@@ -11,7 +12,8 @@ import { NavbarModule } from '../navbar/navbar.module';
   ],
   imports: [
     CommonModule,
-    NavbarModule
+    NavbarModule,
+    AnalyticsRoutingModule
   ]
 })
 export class AnalyticsModule { }
