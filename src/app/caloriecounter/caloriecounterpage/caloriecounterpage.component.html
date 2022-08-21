@@ -7,5 +7,15 @@
         <input type="text" placeholder="Enter name of food" [(ngModel)]="foodname">
         <button  type="button" (click)="foodapi()">Search</button>
     </div>
+    <div>
+        <h2>Foods added : </h2><br>
+        <ol *ngFor="let food of foodList">
+            <li>{{food}}</li>
+        </ol>
+    </div>
+    <div>
+        <h3>Calories in Total : </h3><br>
+        {{TotalCalories}}
+    </div>
 </section>
 

@@ -12,7 +12,9 @@ export class CaloriecounterpageComponent implements OnInit {
   constructor(public appservice:AppService) { }
 
   foodname: string ="";
+  foodList : any[] = [];
   calorieDetail: any;
+  TotalCalories = 0;
   ngOnInit(): void {
   }
 
@@ -37,5 +39,7 @@ export class CaloriecounterpageComponent implements OnInit {
   generatecaloriedetail(caldetail: any){
     this.calorieDetail = new CalorieDetail(caldetail.text, caldetail.parsed[0].food.image,caldetail.parsed[0].food.nutrients.ENERC_KCAL,caldetail.parsed[0].food.nutrients.PROCNT,caldetail.parsed[0].food.nutrients.FAT,caldetail.parsed[0].food.nutrients.CHOCDF);
     console.log(this.calorieDetail);
+    this.foodList.push(this.calorieDetail.foodname);
+    this.TotalCalories += this.calorieDetail.calories;
   }
 }

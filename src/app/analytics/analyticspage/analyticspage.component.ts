@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ChartConfiguration , Chart } from 'chart.js';
 import { AppService } from 'src/app/app.service';
 
-
 @Component({
   selector: 'app-analyticspage',
   templateUrl: './analyticspage.component.html',

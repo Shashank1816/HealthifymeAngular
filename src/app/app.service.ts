@@ -89,11 +89,17 @@ export class AppService {
     return this.http.put(this.baseURL + 'users/' + this.globalloggedinuser.user_id, body, { headers });
   }
 
+  getUsersWeightList(): Observable<any> {
+    return this.http.get<Weight[]>(this.baseURL + 'users/' + this.globalloggedinuser.user_id + '/weight');
+  }
+
+  //API
+
+  private API_Base_url = "https://api.edamam.com/api/food-database/v2/parser?app_id=42c0cf1e&app_key=1854358d09753492a01854797a61183e&ingr=";
   //service for getting calorie info of food
   getcalorieinfo(food: string): Observable<any> {
     console.log("inside getcalorieinfo")
-    return this.http.get<any>(this.baseURL + 'caloriecount?food=' + food);
-
+    return this.http.get<any>(this.API_Base_url + food);
   }
 
   //service for getting the users weight tracker entries
