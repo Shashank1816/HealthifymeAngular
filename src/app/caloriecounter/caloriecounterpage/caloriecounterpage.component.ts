@@ -1,6 +1,7 @@
 import { CalorieDetail } from './../../CalorieDetail';
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-caloriecounterpage',
@@ -9,10 +10,11 @@ import { AppService } from 'src/app/app.service';
 })
 export class CaloriecounterpageComponent implements OnInit {
 
-  constructor(public appservice:AppService) { }
+  constructor(public appservice:AppService, public route:Router) { }
 
   foodname: string ="";
   foodList : any[] = [];
+  calorielist: any[]=[];
   calorieDetail: any;
   TotalCalories = 0;
   ngOnInit(): void {
@@ -40,6 +42,11 @@ export class CaloriecounterpageComponent implements OnInit {
     this.calorieDetail = new CalorieDetail(caldetail.text, caldetail.parsed[0].food.image,caldetail.parsed[0].food.nutrients.ENERC_KCAL,caldetail.parsed[0].food.nutrients.PROCNT,caldetail.parsed[0].food.nutrients.FAT,caldetail.parsed[0].food.nutrients.CHOCDF);
     console.log(this.calorieDetail);
     this.foodList.push(this.calorieDetail.foodname);
+    this.calorielist.push(this.calorieDetail.calories);
     this.TotalCalories += this.calorieDetail.calories;
+  }
+
+  navigatetotrackers(){
+    this.route.navigateByUrl("trackers");
   }
 }

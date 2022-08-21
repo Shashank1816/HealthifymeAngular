@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CaloriecounterpageComponent } from './caloriecounterpage/caloriecounterpage.component';
 import { NavbarModule } from '../navbar/navbar.module';
 import { FormsModule } from '@angular/forms';
+import { FooterModule } from '../footer/footer.module';
 
 
 
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     NavbarModule,
-    FormsModule
+    FormsModule,
+    FooterModule
   ]
 })
 export class CaloriecounterModule { }
