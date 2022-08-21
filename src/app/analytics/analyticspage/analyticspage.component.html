@@ -3,3 +3,15 @@
 <button (click)="getWaterArray()">console water array</button>
 <button (click)="getCalorieArrays()">Console calorie array</button>
 <button (click) = "getweightarray()">console weight array</button>
+
+<!--Charts-->
+<div class="text-center bg-dark text-white">
+    <h2>Analytics</h2>
+</div>
+<canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [type]="'bar'">
+</canvas>

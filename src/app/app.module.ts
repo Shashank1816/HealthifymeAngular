@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { GoogleChartsModule } from 'angular-google-charts';
 import { AnalyticsModule } from './analytics/analytics.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +18,7 @@ import { CalorietrackerModule } from './trackers/calorietracker/calorietracker.m
 import { TrackersModule } from './trackers/trackers.module';
 import { WatertrackerModule } from './trackers/watertracker/watertracker.module';
 import { WeighttrackerModule } from './trackers/weighttracker/weighttracker.module';
-
+import { NgChartsModule } from 'ng2-charts';
 
  
 
@@ -37,7 +38,9 @@ import { WeighttrackerModule } from './trackers/weighttracker/weighttracker.modu
     FormsModule,
     TrackersModule,
     CaloriecounterModule,
-    AnalyticsModule
+    AnalyticsModule,
+    GoogleChartsModule,
+    NgChartsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
