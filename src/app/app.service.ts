@@ -89,9 +89,6 @@ export class AppService {
     return this.http.put(this.baseURL + 'users/' + this.globalloggedinuser.user_id, body, { headers });
   }
 
-  getUsersWeightList(): Observable<any> {
-    return this.http.get<Weight[]>(this.baseURL + 'users/' + this.globalloggedinuser.user_id + '/weight');
-  }
 
   //API
 
