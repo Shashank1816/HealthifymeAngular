@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AnalyticsModule } from './analytics/analytics.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { CalorietrackerModule } from './trackers/calorietracker/calorietracker.m
 import { TrackersModule } from './trackers/trackers.module';
 import { WatertrackerModule } from './trackers/watertracker/watertracker.module';
 import { WeighttrackerModule } from './trackers/weighttracker/weighttracker.module';
+
+
+ 
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import { WeighttrackerModule } from './trackers/weighttracker/weighttracker.modu
     HttpClientModule,
     FormsModule,
     TrackersModule,
-    CaloriecounterModule
+    CaloriecounterModule,
+    AnalyticsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

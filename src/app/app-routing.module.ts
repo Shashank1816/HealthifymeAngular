@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnalyticspageComponent } from './analytics/analyticspage/analyticspage.component';
 import { AppComponent } from './app.component';
 import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'caloriecounter',
     component: CaloriecounterpageComponent
+  },
+  {
+    path:'analytics/:email',
+    component:AnalyticspageComponent
   },
   {
     path: '',
