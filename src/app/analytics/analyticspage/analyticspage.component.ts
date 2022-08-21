@@ -13,6 +13,15 @@ export class AnalyticspageComponent implements OnInit {
     
   }
 
+  getweightarray(){
+
+  }
+  getWaterArray(){
+
+  }
+  getCalorieArrays(){
+    
+  }
   
 
 }
