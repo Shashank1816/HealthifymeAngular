@@ -95,4 +95,20 @@ export class AppService {
     return this.http.get<any>(this.baseURL + 'caloriecount?food=' + food);
 
   }
+
+  //service for getting the users weight tracker entries
+  getUsersWeightList():Observable<any>{
+    return this.http.get<Weight[]>(this.baseURL + 'users/' + this.globalloggedinuser.user_id+ '/weight');
+  }
+
+  //service for getting the users water tracker entries
+  getUsersWaterList():Observable<any>{
+    return this.http.get<Water[]>(this.baseURL+ 'users/' + this.globalloggedinuser.user_id + '/water') ;
+  }
+
+  //service for gettng the users calorie tracker entries
+  getUsersCalorieList():Observable<any>{
+    return this.http.get<Calorie[]>(this.baseURL+'users/' + this.globalloggedinuser.user_id + '/calorie');
+  }
 }
+

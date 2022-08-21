@@ -5,6 +5,7 @@ import { NavbarModule } from '../navbar/navbar.module';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { FormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
+import { FooterModule } from '../footer/footer.module';
 
 
 
@@ -17,7 +18,8 @@ import { NgChartsModule } from 'ng2-charts';
     NavbarModule,
     GoogleChartsModule,
     FormsModule,
-    NgChartsModule
+    NgChartsModule,
+    FooterModule
   ],
   exports:[
     AnalyticspageComponent

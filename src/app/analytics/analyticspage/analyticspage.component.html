@@ -1,17 +1,29 @@
 <app-navbar></app-navbar>
-<p>analyticspage works!</p>
-<button (click)="getWaterArray()">console water array</button>
+<!-- <button (click)="getWaterArray()">console water array</button>
 <button (click)="getCalorieArrays()">Console calorie array</button>
-<button (click) = "getweightarray()">console weight array</button>
+<button (click) = "getweightarray()">console weight array</button> -->
 
 <!--Charts-->
 <div class="text-center bg-dark text-white">
     <h2>Analytics</h2>
 </div>
-<canvas baseChart
-        [data]="barChartData"
-        [options]="barChartOptions"
-        [plugins]="barChartPlugins"
-        [legend]="barChartLegend"
-        [type]="'bar'">
-</canvas>
+
+<div class="graphs" style="height:400px;width:600px;margin-left: auto;margin-right:auto; margin-top:30px;">
+    <canvas id="canvas2" style="margin-top:25px">{{chart2}}</canvas>
+    <p class="text-center text-secondary">No of enteries -></p>
+</div>
+
+<div class="graphs" style="height:400px;width:600px;margin-left: auto;margin-right:auto;margin-top:30px;">
+    <canvas id="canvas" style="margin-top:25px">{{chart}}</canvas>
+    <p class="text-center text-secondary text-sm">No of enteries -></p>
+</div>
+
+<div class="graphs" style="height:400px;width:600px;margin-left: auto;margin-right:auto; margin-top: 30px;">
+    <canvas id="canvas3" style="margin-top:25px">{{chart3}}</canvas>
+    <p class="text-center text-secondary">No of enteries -></p>
+</div>
+
+<app-footer></app-footer>
+
+
+
