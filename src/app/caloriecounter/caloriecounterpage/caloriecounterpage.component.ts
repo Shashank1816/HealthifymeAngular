@@ -31,15 +31,18 @@ export class CaloriecounterpageComponent implements OnInit {
     console.log("inside foodapi" ,this.foodname);
     
     this.appservice.getcalorieinfo(this.foodname).subscribe(data => {
+      console.log("Got API data", data);
       var caloriedetail = data;
       var calstr = JSON.stringify(caloriedetail);
       const caldetail = JSON.parse(calstr);
-      this.generatecaloriedetail(caldetail);
+      setTimeout(() => {
+        this.generatecaloriedetail(caldetail);
+      }, 100);
     })
   }
 
   generatecaloriedetail(caldetail: any){
-    this.calorieDetail = new CalorieDetail(caldetail.text, caldetail.parsed[0].food.image,caldetail.parsed[0].food.nutrients.ENERC_KCAL,caldetail.parsed[0].food.nutrients.PROCNT,caldetail.parsed[0].food.nutrients.FAT,caldetail.parsed[0].food.nutrients.CHOCDF);
+    this.calorieDetail = new CalorieDetail(caldetail.text, caldetail.hints[0].food.image,caldetail.hints[0].food.nutrients.ENERC_KCAL,caldetail.hints[0].food.nutrients.PROCNT,caldetail.hints[0].food.nutrients.FAT,caldetail.hints[0].food.nutrients.CHOCDF);
     console.log(this.calorieDetail);
     this.foodList.push(this.calorieDetail.foodname);
     this.calorielist.push(this.calorieDetail.calories);
