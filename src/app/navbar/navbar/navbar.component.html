@@ -44,8 +44,24 @@
           </a>
           <ul class="dropdown-menu bg-grey" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" routerLink="/profile/{{this.appservice.globalloggedinuser.email}}">My Profile</a></li>
-            <li><a class="dropdown-item " routerLink="/analytics/{{this.appservice.globalloggedinuser.email}}">Analytics</a></li>
-            <li><a class="dropdown-item " href="">Logout</a></li>
+            <li><a class="dropdown-item" routerLink="/analytics/{{this.appservice.globalloggedinuser.email}}">Analytics</a></li>
+            <li>
+              <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title">Leaving Us?</h4>
+                  <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to logout?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger btn-outline-dark" (click)="logout()">Yes</button>
+                  <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">No</button>
+                </div>
+              </ng-template>
+              
+              <a class="dropdown-item" (click)="open(content)" style="cursor: pointer;">Logout</a>
+            </li>
           </ul>
           
           </li>

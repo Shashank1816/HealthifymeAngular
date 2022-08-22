@@ -19,6 +19,7 @@ import { TrackersModule } from './trackers/trackers.module';
 import { WatertrackerModule } from './trackers/watertracker/watertracker.module';
 import { WeighttrackerModule } from './trackers/weighttracker/weighttracker.module';
 import { NgChartsModule } from 'ng2-charts';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
  
 
@@ -40,7 +41,8 @@ import { NgChartsModule } from 'ng2-charts';
     CaloriecounterModule,
     AnalyticsModule,
     GoogleChartsModule,
-    NgChartsModule
+    NgChartsModule,
+    NgbModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
