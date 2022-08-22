@@ -3,6 +3,7 @@ import { Plan } from 'src/app/Plan';
 import { Diet } from 'src/app/Diet';
 import { AppService } from 'src/app/app.service';
 import { Router } from '@angular/router';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-plans',
@@ -11,7 +12,20 @@ import { Router } from '@angular/router';
 })
 export class PlansComponent implements OnInit {
 
-  constructor(private appservice: AppService, private route:Router) { }
+  constructor(public route: Router, public appservice: AppService, config: NgbModalConfig, private modalService: NgbModal) {
+    // customize default values of modals used by this component tree
+    config.backdrop = 'static';
+    config.keyboard = false;
+  }
+
+  open(content: any) {
+    this.modalService.open(content);
+  }
+
+  Login() {
+    this.route.navigateByUrl('login');
+    this.modalService.dismissAll();
+  }
 
   ngOnInit(): void {
   }
@@ -43,42 +57,38 @@ export class PlansComponent implements OnInit {
   }
 
   //function after selecting weight loss
-  activateweightloss(){
-    if(this.appservice.globalloggedinuser){
+  activateweightloss(content: any) {
+    if (this.appservice.globalloggedinuser) {
       //alert("You have selected weight loss!");
       this.route.navigateByUrl("/plans/weightloss");
     }
-    else{
-      alert("You need to be logged in first!");
-      this.route.navigateByUrl("/login");
+    else {
+      this.modalService.open(content);
     }
-    
+
   }
 
   //function after selecting weight gain
-  activateweightgain(){
-    if(this.appservice.globalloggedinuser){
+  activateweightgain(content: any) {
+    if (this.appservice.globalloggedinuser) {
       //alert("You have selected weight gain!");
       this.route.navigateByUrl("/plans/weightgain");
     }
-    else{
-      alert("You need to be logged in first!");
-      this.route.navigateByUrl("/login");
+    else {
+      this.modalService.open(content);
     }
-    
   }
- 
+
   //function after selecting musclebuild
-  activatemusclebuild(){
-    if(this.appservice.globalloggedinuser){
-     // alert("You have selected muscle build!");
+  activatemusclebuild(content: any) {
+    if (this.appservice.globalloggedinuser) {
+      // alert("You have selected muscle build!");
       this.route.navigateByUrl("/plans/musclebuild");
     }
-    else{
-      alert("You need to be logged in first!");
-      this.route.navigateByUrl("/login");
+    else {
+      this.modalService.open(content);
     }
-    
+
   }
 
 }

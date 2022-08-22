@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { AppService } from 'src/app/app.service';
 
 @Component({
@@ -9,39 +10,48 @@ import { AppService } from 'src/app/app.service';
 })
 export class TrackersComponent implements OnInit {
 
-  constructor(public route:Router,public appservice:AppService) { }
+
+  constructor(public route: Router, public appservice: AppService, config: NgbModalConfig, private modalService: NgbModal) {
+    // customize default values of modals used by this component tree
+    config.backdrop = 'static';
+    config.keyboard = false;
+  }
+
+  open(content: any) {
+    this.modalService.open(content);
+  }
 
   ngOnInit(): void {
   }
 
-  afterclickwater(){
-    if(this.appservice.globalloggedinuser){
+  Login() {
+    this.route.navigateByUrl('login');
+    this.modalService.dismissAll();
+  }
+
+  afterclickwater(content: any) {
+    if (this.appservice.globalloggedinuser) {
       this.route.navigateByUrl("/trackers/water");
     }
-    else
-    {
-      this.route.navigateByUrl("/login");
-      alert("You need to be logged in first");
+    else {
+      this.modalService.open(content);
     }
-    
   }
-  afterclickcalorie(){
-    if(this.appservice.globalloggedinuser){
+  afterclickcalorie(content: any) {
+    if (this.appservice.globalloggedinuser) {
       this.route.navigateByUrl("/trackers/calorie");
     }
-    else{
-      this.route.navigateByUrl("/login");
-      alert("You need to be logged in first!");
+    else {
+      this.modalService.open(content);
     }
   }
-  afterclickweight(){
-    if(this.appservice.globalloggedinuser){
+  afterclickweight(content: any) {
+    if (this.appservice.globalloggedinuser) {
       this.route.navigateByUrl("/trackers/weight");
     }
-    else{
-      this.route.navigateByUrl("/login");
-      alert("You need to be logged in first");
+    else {
+      this.modalService.open(content);
     }
-    
+
   }
 }

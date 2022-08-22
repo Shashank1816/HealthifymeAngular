@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AppService } from 'src/app/app.service';
 import { Calorie } from 'src/app/Calorie';
 import { User } from 'src/app/User';
@@ -11,16 +12,24 @@ import { User } from 'src/app/User';
 })
 export class CalorietrackerComponent implements OnInit {
 
-  constructor(public appservice: AppService) { }
+  constructor(public route: Router, public appservice: AppService, config: NgbModalConfig, private modalService: NgbModal) {
+    // customize default values of modals used by this component tree
+    config.backdrop = 'static';
+    config.keyboard = false;
+  }
+
+  open(content: any) {
+    this.modalService.open(content);
+  }
 
   currentcalorie = new Calorie;
-  date : string = "";
+  date: string = "";
   caltoday: any;
 
   ngOnInit(): void {
   }
-  
-  submitcaloriedata() {
+
+  submitcaloriedata(content: any) {
     console.log("The entered calorie data is ", this.caltoday + " and " + this.date);
     this.currentcalorie.calories = this.caltoday;
     this.currentcalorie.date = this.date;
@@ -30,7 +39,7 @@ export class CalorietrackerComponent implements OnInit {
       console.log("inside SubmitCalorie data after sending the request and getting some response ", data);
     }
     );
-    alert("Your data for today is submitted");
+    this.modalService.open(content);
   }
 
 }
