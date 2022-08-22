@@ -74,7 +74,7 @@ export class AnalyticspageComponent implements OnInit {
         data:{
           labels: Array.from(Array(this.caloriearray.length).keys()),
           datasets:[{
-            label:'Calories burnt (kcal)/entry',
+            label:'Calorie intake (kcal)/entry',
             data:this.caloriearray,
             borderWidth: 1,
             backgroundColor:'rgba(93,175,89,0.1)',
