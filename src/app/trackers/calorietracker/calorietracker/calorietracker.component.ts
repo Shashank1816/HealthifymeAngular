@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 import { Calorie } from 'src/app/Calorie';
 import { User } from 'src/app/User';
@@ -29,6 +30,7 @@ export class CalorietrackerComponent implements OnInit {
       console.log("inside SubmitCalorie data after sending the request and getting some response ", data);
     }
     );
+    alert("Your data for today is submitted");
   }
 
 }
