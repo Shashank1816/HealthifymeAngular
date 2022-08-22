@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
-<section class="vh-100 gradient-custom">
+<section class="vh-150 gradient-custom">
     <div class="text-center text-white" style="padding-top:30px;">
-        <h3>Calculate calories you ate today.</h3>
+        <h3>Calculate calories you ate today. Per Serving.</h3>
     </div>
 
     <div class="col-md-4 col-sm-6 col-xs-12" style="margin-left:auto;margin-right:auto; width:358px;">
@@ -15,11 +15,18 @@
           </div>
           <div class="deal-bottom">
             <ul class="deal-item" *ngFor="let item of foodList">
-              <li><strong>Food : </strong>{{item}}</li>
+              <li><strong>Food : </strong>{{item[0]}} ({{item[1]}} KCal✅)</li>
 
             </ul>
             <div class="btn-area">
-              <a (click)="navigatetotrackers()">Total Cals : {{TotalCalories}}</a>       
+              <a (click)="navigatetotrackers()">Total Cals : {{TotalCalories}} KCal</a>       
+            </div>
+
+            <div class="text-white bg-dark rounded nutrients" style="margin-left:11px;margin-right:11px;margin-bottom:10px;position:relative;bottom:20px;padding-bottom:5px;">
+                Macros <br>
+                Proteins - {{OtherNutrients[0]}} 
+                Fat - {{OtherNutrients[1]}} 
+                Carbs - {{OtherNutrients[2]}} 
             </div>
           </div>
         </div>
