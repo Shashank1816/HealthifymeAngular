@@ -1,14 +1,14 @@
 <ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">You are not logged in</h4>
-        <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    <div class="modal-header bg-dark text-white ">
+        <h4 class="modal-title" id="modal-basic-title" Style="margin-left:180px;">First, Login ! </h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')" style="position:relative;right:12px;color:white"></button>
     </div>
-    <div class="modal-body">
+    <!-- <div class="modal-body" style="height:50px">
         <p>Redirect to login?</p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger btn-outline-dark" (click)="Login()">Yes</button>
-        <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">No</button>
+    </div> -->
+    <div class="modal-footer text-center">
+        <button type="button" class="btn btn-lg btn-secondary btn-outline-dark  " (click)="Login()" style="margin-left:auto;margin-right:auto;width:49%;">Ok</button>
+        <button type="button" class="btn btn-lg  btn-secondary btn-outline-dark" (click)="d('Cross click')" style="margin-right:auto;width:49%">No</button>
     </div>
 </ng-template>
 
