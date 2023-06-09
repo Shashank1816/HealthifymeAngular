@@ -40,7 +40,12 @@ export class CaloriecounterpageComponent implements OnInit {
   }
 
   generatecaloriedetail(caldetail: any) {
-    this.calorieDetail = new CalorieDetail(caldetail.text, caldetail.hints[0].food.image, caldetail.hints[0].food.nutrients.ENERC_KCAL, caldetail.hints[0].food.nutrients.PROCNT, caldetail.hints[0].food.nutrients.FAT, caldetail.hints[0].food.nutrients.CHOCDF);
+    this.calorieDetail = new CalorieDetail(caldetail.text, 
+      caldetail.hints[0].food.image, 
+      caldetail.hints[0].food.nutrients.ENERC_KCAL, 
+      caldetail.hints[0].food.nutrients.PROCNT, 
+      caldetail.hints[0].food.nutrients.FAT, 
+      caldetail.hints[0].food.nutrients.CHOCDF);
     console.log(this.calorieDetail);
     this.foodList.push([this.calorieDetail.foodname, Math.round(this.calorieDetail.calories)]);
     this.TotalCalories += Math.round(this.calorieDetail.calories);
